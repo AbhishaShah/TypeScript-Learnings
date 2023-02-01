@@ -1,12 +1,10 @@
-// interface is blueprint of the class
-
 abstract class Registartaion {
   constructor(public name: string, public role: string) {}
 
   abstract getRole(): string; // Method 'getCountry' cannot have an implementation because it is marked abstract.ts(1245)
 
   getCountry(): string {
-    // We can define method in abstartc class
+    // We can define method in abstract class
     return "Canada";
   }
 }

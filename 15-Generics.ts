@@ -1,6 +1,6 @@
 /* identityOne it takes a type parameter Type, and an argument arg which is also Type, and return type also Type.” */
 const identityOne = <Type>(val: Type): Type => {
-  // val.length; // TS Error: Property 'length' does not exist on type 'Type'.ts(2339)
+  // val.length; // TS Error: Property 'length' does not exist on type 'Type'.ts(2339) Because it will not always guaranteed that it woluld be string,could be number,boolean or else
 
   return val;
 };
@@ -17,3 +17,9 @@ const identityTwo = <T>(val: T[]): T[] => {
 
 identityTwo([10]);
 //identityTwo("10"); // TS Error: Argument of type 'string' is not assignable to parameter of type 'unknown[]'.ts(2345)
+
+const getSearchProducts = <T>(products: T[]): T => {
+  //return products; // TS Error: Type 'T[]' is not assignable to type 'T'. 'T' could be instantiated with an arbitrary type which could be unrelated to 'T[]'.
+  const myIndex = 2;
+  return products[myIndex]; // It should be from the products array.
+};

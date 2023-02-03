@@ -5,11 +5,11 @@ const identityOne = <Type>(val: Type): Type => {
   return val;
 };
 
-/* identityOne is the generic function, takes a type parameter Type, and an argument arg which is an array of Types, and returns an array of Types.
+identityOne(120); // now Type become "number" here
+
+/* identityTwo is the generic function, takes a type parameter Type, and an argument arg which is an array of Types, and returns an array of Types.
 If we passed in an array of numbers, we’d get an array of numbers back out, as Type would bind to number. 
 This allows us to use our generic type variable Type as part of the types we’re working with, rather than the whole type, giving us greater flexibility. */
-identityOne(120); // now Type become "string here"
-
 const identityTwo = <T>(val: T[]): T[] => {
   val.length;
   return val;
